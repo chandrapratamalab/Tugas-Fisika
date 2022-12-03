@@ -13,6 +13,8 @@ begin
     writeln('Resistor 2 = ', r2);
     writeln('Resistor 3 = ', r3);
     writeln('Resistor 4 = ', r4);
+
+    
     
     writeln('=== Menghitung Resitor Total === ');
 

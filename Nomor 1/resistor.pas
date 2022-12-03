@@ -1,4 +1,5 @@
 program menghitungResitor;
+
 const
     r1 = 3;
     r2 = 6;
@@ -7,6 +8,7 @@ const
     v = 15;
 var 
     rp1, rp2, rpt, i, ir1, ir2, is1:real;
+
 begin
     writeln('=========== FISIKA ==========');
     writeln('Resistor 1 = ', r1);
@@ -41,8 +43,8 @@ begin
     writeln('i = ', i:4:0, ' Ampere');
     writeln('');
     writeln('====== Mencari Arus yang melawati masing-masing Resistor ======');
-    writeln('Arus pada resistor 1    = ', ir1:4:0);
-    writeln('Arus pada resistor 2    = ', ir2:4:1);
-    writeln('Arus pada resistor seri = ', is1:4:1);
+    writeln('Arus pada resistor 1    = ', ir1:4:0, ' Ampere');
+    writeln('Arus pada resistor 2    = ', ir2:4:1, ' Ampere');
+    writeln('Arus pada resistor seri = ', is1:4:1, ' Ampere');
     readln;
 end.

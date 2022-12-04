@@ -6,11 +6,9 @@ const
     c4 = 6;
     c5 = 20;
     v = 15;
-    v2 = 110;
-    i = 2.8;
-     
+ 
 var
-    cp1,cpp, cp2, cpt, cpt2:real;
+    cp1,cpp, cp2, cpt, cpt2, Q:real;
 begin
     writeln('====== Program Menghitung Kapasitor ======');
     writeln('==========================================');
@@ -27,11 +25,23 @@ begin
     cpp := 1/cp1; {0.25 diubah ke pecahan biasa menjadi 4}
     cp2 := cpp + c4 + c5;
     cpt := 1/cp2 + 1/c2; 
-    cpt2 := 1/cpt;
+    cpt2 := 1/cpt; {0.05 diubah ke pecahan biasa menjadi 20}
+
+    {Menampilkan hasil ke layar}
+    writeln('======= Menghitung Kapasitor Pengganti =======');
     writeln('Kapasitor Pengganti 1 =',cpp:4:0);
     writeln('Kapasitor Pengganti 1 =',cp2:4:0);
     writeln('Kapasitor Pengganti Total =',cpt2:4:0);
-readln;
 
+
+    {Proses Menghitung Muatan}
+    Q := cpt2 * 0.001 * v;
+
+    writeln('');
+    writeln('Mencari Muatan yang dialiri tengangan 15 volt');
+    writeln('Q = ', Q:4:1);
+
+
+readln;
 
 end.

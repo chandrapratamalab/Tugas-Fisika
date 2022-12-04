@@ -7,10 +7,10 @@ const
     r4 = 1; 
     v = 15;
 var 
-    rp1, rp2, rpt, i, ir1, ir2, is1:real;
+    rp1, rp2, rpt,rpp2, i, ir1, ir2, is1:real;
 
 begin
-    writeln('=========== FISIKA ==========');
+    writeln('=========== DIKETAHUI ==========');
     writeln('Resistor 1 = ', r1);
     writeln('Resistor 2 = ', r2);
     writeln('Resistor 3 = ', r3);
@@ -23,7 +23,8 @@ begin
     {RUMUS Mencari Resistor Pengganti}
     rp1 := r3 + r4;
     rp2 := 1/r1 + 1/r2;
-    rpt := 1/rp1 + rp2;
+    rpp2 := 1/rp2;
+    rpt := 1/rp1 + 1/rpp2;
 
     {RUMUS Mencari Arus yang keluar dari sumber tengangan}
     i := v/rpt;
@@ -36,7 +37,7 @@ begin
     writeln('');
     writeln('===== Mencari Resistor Pengganti =====');
     writeln('Resistor Pengganti 1     = ', rp1:4:0, ' ohm');
-    writeln('Resistor Pengganti 2     = ', rp2:4:1, ' ohm'); {1/2 diubah ke desimal}
+    writeln('Resistor Pengganti 2     = ', rpp2:4:0, ' ohm');
     writeln('Resistor Pengganti Total = ', rpt:4:0, ' ohm');
     writeln('');
     writeln('====== Mencari Arus yang keluar dari sumber tengangan ======');

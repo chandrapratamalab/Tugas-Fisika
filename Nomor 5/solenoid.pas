@@ -6,21 +6,20 @@ const
     N = 200;
     pico = 4000;
 var
-    L, L2, L3:real;
+    L, L2:real;
 begin
     writeln('====== Menghitung Induktasi Solenoid ======');
 
     {Proses menghitung induksi solenoid}
 
     L := SQR(N) * 0.0000004 * 3.14 * 0.00005 / 0.04;
-    writeln('Induktasi = ', L);
+    writeln('A = ', L);
 
     writeln('');
     writeln('====== Jawaban B ======');
 
     {Proses menghitung jawaban B}
 
-    L2 := 2 * 0.00005 * 4000;
-    L3 := L2 * 3.14;
-    writeln(L3:4:3);
+    L2 := SQR(N) * 4000 * 0.0000004 * 0.00005 * 3.14 / 0.04;
+    writeln('B = ', L2);
 end.

@@ -5,6 +5,7 @@ const
     A = 0.00005;
     N = 200;
     pico = 4000;
+    phi = 3.14;
 var
     L, L2:real;
 begin
@@ -12,7 +13,7 @@ begin
 
     {Proses menghitung induksi solenoid}
 
-    L := SQR(N) * 0.0000004 * 3.14 * 0.00005 / 0.04;
+    L := SQR(N) * 0.0000004 * phi * A / p;
     writeln('A = ', L);
 
     writeln('');
@@ -20,6 +21,6 @@ begin
 
     {Proses menghitung jawaban B}
 
-    L2 := SQR(N) * 4000 * 0.0000004 * 0.00005 * 3.14 / 0.04;
+    L2 := SQR(N) * pico * 0.0000004 * A * phi / p;
     writeln('B = ', L2);
 end.

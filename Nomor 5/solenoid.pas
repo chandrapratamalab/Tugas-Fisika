@@ -7,7 +7,7 @@ const
     pico = 4000;
     phi = 3.14;
 var
-    L, L2:real;
+    L, L2, L3:real;
 begin
     writeln('====== Menghitung Induktasi Solenoid ======');
 
@@ -21,6 +21,7 @@ begin
 
     {Proses menghitung jawaban B}
 
-    L2 := SQR(N) * pico * 0.0000004 * A * phi / p;
-    writeln('B = ', L2);
+    L2 := L * pico;
+    L3 := L2 * 0.001;
+    writeln('B = ', L3);
 end.
